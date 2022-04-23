@@ -42,7 +42,7 @@ namespace INSS.Test
         public void CalcularDesconto_Deve_Calcular_Desconto_Teto(int ano, decimal salario, decimal teto)
         {
             #region Arrange
-            CalculadorInss act = new CalculadorInss(_listaTabelaINSS);
+            ICalculadorInss act = new CalculadorInss(_listaTabelaINSS);
             DateTime data = new DateTime(ano, 1, 1);
 
             #endregion
@@ -69,7 +69,7 @@ namespace INSS.Test
         public void CalcularDesconto_Deve_Calcular_Desconto(int ano, decimal salario, decimal teto)
         {
             #region Arrange
-            CalculadorInss act = new CalculadorInss(_listaTabelaINSS);
+            ICalculadorInss act = new CalculadorInss(_listaTabelaINSS);
             DateTime data = new DateTime(ano, 1, 1);
 
             #endregion
@@ -91,7 +91,7 @@ namespace INSS.Test
         public void CalcularDesconto_Deve_Lancar_Exception_Quanto_Tabela_NaoExiste()
         {
             #region Arrange
-            CalculadorInss act = new CalculadorInss(_listaTabelaINSS);
+            ICalculadorInss act = new CalculadorInss(_listaTabelaINSS);
             DateTime data = DateTime.MinValue;
             decimal salario = 1000M;
 
