@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace INSS
 {
-    public class TabelaInnsException : Exception
+    public class TabelaInssException : Exception
     {
-        public TabelaInnsException(string message) : base(message)
+        public TabelaInssException(string message) : base(message)
         {
         }
     }

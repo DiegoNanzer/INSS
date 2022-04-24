@@ -105,7 +105,7 @@ namespace INSS.Test
 
             #region Assert
 
-            funcAct.Should().Throw<TabelaInnsException>();
+            funcAct.Should().Throw<TabelaInssException>();
 
             #endregion
         }

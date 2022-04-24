@@ -22,7 +22,7 @@ namespace INSS
             var tabela = _tabelasInss.FirstOrDefault(x => x.AnoReferencia == data.Year);
 
             if (tabela is null)
-                throw new TabelaInnsException($"Tabela do INSS referente ao ano '{data.Year} não informada");
+                throw new TabelaInssException($"Tabela do INSS referente ao ano '{data.Year} não informada");
 
             var faixa = tabela.Faixas.FirstOrDefault(x => salario >= x.FaixaDe && salario <= x.FaixaAte);
 
